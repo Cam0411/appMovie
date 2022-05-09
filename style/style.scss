@@ -1,0 +1,350 @@
+*
+{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body 
+{
+    background: #111319;
+}
+.header 
+{
+    position: fixed;
+    background: #0004;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 1;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: 0.4s;
+    padding: 10px;
+    overflow-x: hidden;
+
+   .title 
+   {
+       height: 100%;
+       display: flex;
+       align-items: center;
+       img 
+       {
+           max-width: 200px;
+           width: 100%;
+           height: auto;
+           margin-right: 5px;
+       }
+       display: flex;
+       li 
+       {
+           color: #fff;
+           list-style: none;
+           padding: 15px;
+           margin-left: 5px;
+           line-height: 25px;
+           margin-top: 5px;
+       } 
+   }
+   .src__box 
+   {
+       text-align: right;
+       display: flex;
+       justify-content: flex-end;
+       height: 100%;
+       align-items: center;
+       .src__info
+       {
+           background: none;
+           color: #fff;
+           border-radius: 24px;
+           padding: 7px 12px;
+           width: 200px;
+           outline: none;
+           border: 2px solid #fff;
+           -webkit-appearance: none;
+           &::placeholder 
+           {
+               color: #fff;
+           }
+       }
+   }
+   .icon__box 
+   {
+       display: none;
+        text-align: right;
+        height: 100%;
+    
+       i 
+       {
+        color: #fff;
+        font-size: 28px;
+       }
+   }
+}
+.header.changebg
+{
+    background-color: #000;
+    z-index: 9999;
+}
+.slider 
+{
+ 
+    height: 100vh;
+    color:  #fff;
+    overflow-x: hidden;
+    .slider__content
+    {
+        height: 100%;
+        background: linear-gradient(right,#0004,#111319);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        .slider__txt
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+    .title__movie
+    {
+        padding: 10px 0px;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 58px;
+    }
+    .title__overview 
+    {
+        padding: 10px 0px;
+        opacity: 0.4;
+        font-size: 18px;
+        line-height: 34px;
+        margin-bottom: 20px;
+    }
+    .title__box 
+    {
+        li 
+        {
+            display: inline-block;
+            list-style: none;
+            padding: 13px 14px;
+            background: #000;
+            width:150px;
+            margin-right: 10px;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            i 
+            {
+                margin-right: 10px;
+            }
+        }
+    }
+  .img__content 
+  {
+      text-align: right;
+      img 
+      {
+          border-radius: 14px;
+          
+      }
+  }
+}
+.container 
+{
+    height: auto;
+    padding: 40px 10px;
+    overflow-x: hidden;
+    margin-top: 20px;
+    .swiper.mySwiper
+    {
+        height: auto;
+        margin-bottom: 40px;
+        img 
+        {
+            border-radius: 10px;
+            max-width: 250px;
+            width: 100%;
+        }
+    }
+    .title 
+    {
+        color: #fff;
+        font-weight: 700;
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+}
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after
+{
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after
+{
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+.src__container 
+{
+    margin-top: 200px;
+    margin-bottom: 100px;
+    display: none;
+    .img__src
+    {
+        text-align: center;
+        img 
+        {
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 14px;
+            padding: 20px 0px;
+            max-width: 250px;
+            width: 100%;
+        }
+    }
+    .src__title
+    {
+        text-align: center;
+        color: #fff;
+        font-size: 35px;
+        font-weight: 700;
+         padding: 20px;
+    }
+}
+
+@media (max-width:750px){
+    .header 
+{
+    .col 
+    {
+        padding: 0px;
+    }
+    .title
+    {
+        li 
+        {
+            display: none;
+        }
+    }
+    .src__box
+    {
+        display: none;
+        
+    }
+    .icon__box 
+    {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+}
+    .slider 
+    {
+        .img__content 
+        {
+            img 
+            {
+                display: none;
+            }
+        }
+        .title__movie
+        {
+            font-size: 25px;
+            line-height: 35px;
+        }
+        .title__overview
+        {
+            font-size: 16px;
+            line-height: 25px;
+        }
+        .title__box 
+        {
+            li 
+            {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after
+{
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: none;
+
+}
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after
+{
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: none;
+}
+.container
+{
+    .title 
+    {
+        font-size: 20px;
+    }
+}
+}
+
+@media (min-width:751px) and (max-width:1023.5px){
+.header 
+{
+  
+  
+    .title
+    {
+        li 
+        {
+            display: none;
+        }
+    }
+    .src__box
+    {
+        display: none;
+        
+    }
+    .icon__box 
+{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+}
+.slider 
+{
+    .img__content 
+    {
+        img 
+        {
+            display: none;
+        }
+    }
+  
+}
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after
+{
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: none;
+
+}
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after
+{
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: none;
+}
+
+}
