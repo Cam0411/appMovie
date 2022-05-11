@@ -1,0 +1,261 @@
+*
+{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body 
+{
+    background: #111319;
+    
+}
+.header 
+{
+    text-align: center;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 50px;
+    .menu
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px;
+        i 
+        {
+            color: #ffff;
+             font-size: 25px;
+        }
+    }
+    .menu__box 
+    {
+        padding: 20px;
+    }
+    .src__form
+    {
+        display: flex;
+        border-bottom: 2px solid #fff;
+        padding: 10px 12px;
+        position: fixed;
+        z-index: 1;
+        
+        i 
+        {
+            color: #ffff;
+        }
+        .src__res 
+        {
+            background: none;
+            max-width: 250px;
+            width: 100%;
+            outline: none;
+            color: #ffff;
+            border: none;
+            &::placeholder 
+            {
+                color: #ffff;
+            }
+        }
+    }
+  
+}
+.container 
+{
+   height: auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+
+   overflow: hidden;
+   z-index: 9999;
+   .display__moive
+   {
+       height: 300px;
+       max-width: 600px;
+       width: 100%;
+       overflow-y: scroll;
+     
+   }
+   .movie__res-src
+   {
+       display: flex;
+       img 
+       {
+           max-width: 100px;
+           max-height: 80px;
+           width: 100%;
+           height: 100%;
+           padding: 10px;
+       }
+       .title__search
+       {
+           color: #ffff;
+           font-size: 16px;
+           opacity: 0.4;
+           padding: 10px;
+           margin-top: 0px;
+           line-height: 28px;
+       }
+   }
+}
+.modal 
+{
+    position: fixed;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99999;
+    transform: translateX(-100%);
+    transition: 0.4s;
+    display: none;
+    .modal__container 
+    {
+      background: #111319;
+      width: 50%;
+      height: 100%;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      padding: 40px 20px;
+      .modal__title 
+      {
+
+          img 
+          {
+              max-width: 150px;
+              width: 100%;
+          }
+      }
+      .modal__menu
+      {
+          margin-top: 60px;
+         
+          .menu__title
+          {
+              color: #fff;
+              font-size: 20px;
+              font-weight: 700;
+              margin-bottom: 20px;
+              opacity: 0.4;
+          
+          }
+          .modal__list 
+          {
+              color: #fff;
+              line-height: 28px;
+              list-style: none;
+              opacity: 0.4;
+              li 
+              {
+                  padding: 10PX;
+                  font-size: 20px;
+                  width: 100%;
+                  a 
+                  {
+                    color: #fff;
+                    text-decoration: none; 
+                  }
+                  cursor: pointer;
+                  i 
+                  {
+                      margin-right: 10px;
+                  }
+                  .play 
+                  {
+                      margin-left: 5px;
+                  }
+              }
+          }
+      }
+    }
+}
+.modal.open 
+{
+    transform: translateX(0%);
+}
+.modal__background 
+{
+    display: none;
+    position: fixed;
+    background: #0004;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    display: none;
+}
+.loader__container
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 9999;
+    background: #111319;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+.loader {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    border: 4px solid orange;
+    border-top-color: #002147;
+    box-sizing: border-box;
+    background: transparent;
+    animation: loading 1s linear infinite;
+  }
+
+  @keyframes loading {
+    0% {
+      transform: rotate(0deg);
+    }
+    0% {
+      transform: rotate(360deg);
+    }
+  }
+  
+}
+@media (max-width:750px){
+.modal 
+{
+    display: block;
+    .modal__container
+    {
+        width: 80%;
+    }
+}
+.modal__background 
+{
+    display: none;
+}
+.modal__background.open 
+{
+    display: block;
+}
+}
+
+
+@media (min-width:751px) and (max-width:1023.5px){
+
+.modal 
+{
+    display: block;
+}
+.modal__background 
+{
+    display: none;
+}
+.modal__background.open 
+{
+    display: block;
+}
+}

@@ -31,6 +31,7 @@ function showData(){
             <div class="col l-6">
             <div class="img__content">
             <img src="${imgApi}w300${movie.poster_path}">
+            
              </div>
             </div>
           </div>

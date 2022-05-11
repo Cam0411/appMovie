@@ -28,8 +28,9 @@ function getsrcApi(movie){
 function displayMovies(movies){
     const htmls = movies.results.map(movie => {
         return `
-        <div class="col l-3 m-6 c-12">
-        <img src='${imgApi}w200${movie.poster_path}'>
+        <div class="col l-3 m-6 c-12 movie__box">
+        <img class='img__src-box' src='${imgApi}w200${movie.poster_path}'>
+        <p class='title__img-src'>${movie.title}</p>
         </div>
       
        

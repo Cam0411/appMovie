@@ -13,6 +13,7 @@ function renderTrending(movies){
   
       <div class="swiper-slide">
       <img src="${imgApi}w200${movie.poster_path}">
+      <p class='title__movies'> ${movie.title}</p>
       </div>
       `
   })

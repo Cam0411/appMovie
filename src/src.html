@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema</title>
+    <link rel="stylesheet" href="../style/grid.css">
+    <link rel="stylesheet" href="../style/scrollBar.css">
+    <link rel="stylesheet" href="../style/src.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+<div class="header">
+  <div class="menu">
+    <i class="menu fa-solid fa-bars"></i>
+  </div>
+  <div class="src__form">
+    <input placeholder="Search" type="text" class="src__res">
+    <i class="search fa-solid fa-magnifying-glass"></i>
+  </div>
+  
+</div>
+
+    <div class="container">
+    <div class="display__moive">
+     
+    </div>
+  </div>
+  <div class="modal"> 
+    <div class="modal__container"> 
+      <div class="modal__title"> <img src="https://cam0411.github.io/phimmoi2/asset/eCinema_Logo_X2vcmwMm4.png" alt="" srcset=""></div>
+      <div class="modal__menu">
+        <p class="menu__title">Menu 
+          <ul class="modal__list"> 
+            <li><a href="../index.html"><i class="fa-solid fa-house"></i> Home </a></li>
+            <li><i class="play fa-solid fa-play"></i> Lastest </li>
+            <li><i class="fa-solid fa-star"></i>  Rating</li>
+            <li> <a href="src.html"> <i class="fa-solid fa-magnifying-glass"></i> search</a></li>
+          </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="modal__background"> </div>
+  <div class="loader__container">
+    <div class="loader"></div>
+  </div>
+    <script src="../js/srcRes.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+      setTimeout(function(){
+          $('.loader__container').fadeToggle();
+      },1000)
+    </script>
+  </body>
+</html>

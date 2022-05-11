@@ -24,7 +24,7 @@
           </div>
           <div class="col l-4 m-6 c-6">
             <div class="icon__box">
-               <i class="fa-solid fa-bars"></i></div>
+               <i class="menu fa-solid fa-bars"></i></div>
             <div class="src__box">
               <input class="src__info" type="text" placeholder="Search">
             </div>
@@ -115,6 +115,33 @@
         </div>
       </div>
     </div>
+    <div class="modal"> 
+      <div class="modal__container"> 
+        <div class="modal__title"> <img src="https://cam0411.github.io/phimmoi2/asset/eCinema_Logo_X2vcmwMm4.png" alt="" srcset=""></div>
+        <div class="modal__menu">
+          <p class="menu__title">Menu 
+            <ul class="modal__list"> 
+              <li><i class="fa-solid fa-house"></i> Home </li>
+              <li><i class="play fa-solid fa-play"></i> Lastest </li>
+              <li><i class="fa-solid fa-star"></i>  Rating</li>
+              <li> <a href="src/src.html"> <i class="fa-solid fa-magnifying-glass"></i> search</a></li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="modal__background"> </div>
+    <div class="loader__container"> 
+      <div class="loader"> </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+      setTimeout(function(){
+      $('.loader__container').fadeToggle();
+      },1000)
+      
+      
+    </script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"> </script>
     <script src="js/header.js"> </script>
     <script src="js/slider.js"></script>
@@ -126,5 +153,6 @@
     <script src="js/tv__show.js"></script>
     <script src="js/top__rate__tv.js"></script>
     <script src="js/src.js"> </script>
+    <script src="js/menu.js" type=""></script>
   </body>
 </html>

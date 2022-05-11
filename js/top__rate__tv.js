@@ -13,6 +13,7 @@ function rendertop__rate__tv(movies){
   
       <div class="swiper-slide">
       <img src="${imgApi}w200${movie.poster_path}">
+      <p class='title__movies'> ${movie.original_name}</p>
       </div>
       `
   })

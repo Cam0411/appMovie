@@ -12,6 +12,7 @@ function renderupcoming__movie(movies){
   
       <div class="swiper-slide">
       <a href='detail/${movie.id}' ><img src="${imgApi}w200${movie.poster_path}"></a>
+      <p class='title__movies'> ${movie.title}</p>
       </div>
       `
   })
