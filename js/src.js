@@ -27,16 +27,25 @@ function getsrcApi(movie){
 
 function displayMovies(movies){
     const htmls = movies.results.map(movie => {
-        return `
-        <div class="col l-3 m-6 c-12 movie__box">
+        return ` 
+        <div class="col l-3 m-6 c-12 movie__box" onclick='showDetail(${movie.id})'>
         <img class='img__src-box' src='${imgApi}w200${movie.poster_path}'>
         <p class='title__img-src'>${movie.title}</p>
         </div>
       
        
         `
+        
     })
+    
     const html = htmls.join('')
     src.innerHTML = html
+    const movieBoxs = document.querySelectorAll('.movie__box')
+    const overlay = document.querySelector('.overlay__content')
+    for (const movie__box of movieBoxs){
+       movie__box.addEventListener('click',()=> {
+           overlay.classList.add('show')
+       })
+    }
 }
 getSrc()

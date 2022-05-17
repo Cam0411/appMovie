@@ -20,6 +20,7 @@ html(lang="en")
            li Home
            li Latest
            li Rating
+           
         .col.l-4.m-6.c-6
          .icon__box 
           <i class="menu fa-solid fa-bars"></i>
@@ -96,11 +97,14 @@ html(lang="en")
      .modal__background 
      .loader__container 
       .loader 
+     .overlay__content
+      <i class="close fa-solid fa-xmark "></i>
+      .overlay
      script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js')
      script(type='text/javascript').
           setTimeout(function(){
           $('.loader__container').fadeToggle();
-          },1000)
+          },200)
 
        
      script(src="https://unpkg.com/swiper/swiper-bundle.min.js") 

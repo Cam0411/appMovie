@@ -11,13 +11,25 @@ function renderlastest(movies){
   const htmls = movies.results.map(movie => {
       return ` 
   
-      <div class="swiper-slide">
+      <div class="swiper-slide"  onclick='showDetail(${movie.id})'>
       <img src="${imgApi}w200${movie.poster_path}">
       <p class='title__movies'> ${movie.title}</p>
       </div>
       `
   })
   lastest.innerHTML = htmls.join('')
+  const slides = document.querySelectorAll('.swiper-slide')
+  const overlay__content = document.querySelector('.overlay__content')
+  for (const slide of slides ){
+    slide.addEventListener('click',() => {
+      overlay__content.classList.add('show')
+    })
+  }
+  const close = document.querySelector('.close')
+  close.addEventListener('click',() => {
+    window.location.reload()
+    
+  })
 }
 
 function getlastest(callback){
