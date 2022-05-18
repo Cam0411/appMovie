@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="style/popular.css">
+    <link rel="stylesheet" href="../style/grid.css">
+    <link rel="stylesheet" href="../style/scrollBar.css">
+    
+  </head>
+  <body> 
+    <div class="header"> 
+      <div class="grid wide"> 
+        <div class="row"> 
+          <div class="col l-8 m-6 c-6">  
+            <ul class="title"><img src="https://cam0411.github.io/phimmoi2/asset/eCinema_Logo_X2vcmwMm4.png" alt="" srcset="">
+              <li><a href="../index.html">Home</a></li>
+              <li> <a href="popular.html">Popular</a></li>
+              <li> <a href="../latest/latest.html">Latest</a></li>
+            </ul>
+          </div>
+          <div class="col l-4 m-6 c-6">
+            <div class="icon__box">
+               <i class="menu fa-solid fa-bars"></i></div>
+            <div class="src__box">
+              <input class="src__info" type="text" placeholder="Search">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slider"></div>
+    <div class="popular__content container">
+     <p class="title">Popular Movies</p>
+     <div class="popular__box">
+         <div class="grid wide">
+             <div class="row">
+
+             </div>
+         </div>
+     </div>
+      <div class="change__page">
+        <p class="rightarrow"><i class="fa-solid fa-angle-left"></i></p>
+        <p class="result">1</p>
+        <p class="leftarrow"><i class="fa-solid fa-angle-right"></i></p>
+      </div>
+    </div>
+    <div class="src__container"> 
+        <p class="src__title"></p>
+        <div class="img__src"> 
+          <div class="grid wide"> 
+            <div class="row"> </div>
+          </div>
+        </div>
+      </div>
+      <div class="src__movieShow">
+        <div class="img__src"> 
+          <div class="grid wide"> 
+            <div class="row"></div>
+          </div>
+        </div>
+      </div>
+    <div class="modal"> 
+        <div class="modal__container"> 
+          <div class="modal__title"> <img src="https://cam0411.github.io/phimmoi2/asset/eCinema_Logo_X2vcmwMm4.png" alt="" srcset=""></div>
+          <div class="modal__menu">
+            <p class="menu__title">Menu 
+              <ul class="modal__list"> 
+                <li><a href="../index.html">Home</a></li>
+                <li> <a href="popular.html">Popular</a></li>
+                <li> <a href="../latest/latest.html">Latest</a></li>
+                <li> <a href="src/src.html"> <i class="fa-solid fa-magnifying-glass"></i> search</a></li>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+    <div class="modal__background"> </div>
+    <div class="loader__container"> 
+      <div class="loader"> </div>
+    </div>
+    <div class="overlay__content"><i class="close fa-solid fa-xmark "></i>
+      <div class="overlay"></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+      setTimeout(function(){
+      $('.loader__container').fadeToggle();
+      },200)
+      
+      
+    </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"> </script>
+    <script src="../js/header.js" type=""></script>
+    <script src="../js/menu.js"></script>
+    <script src="app/main.js"></script>
+    <script src="../js/slider.js"></script>
+    <script src="../js/src.js"></script>
+  </body>
+</html>

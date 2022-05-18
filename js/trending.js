@@ -26,10 +26,7 @@ function renderTrending(movies){
       overlay.classList.add('show')
     })
   }
-  close.addEventListener('click',() => [
-    
-  ])
-  
+ 
 }
 
 

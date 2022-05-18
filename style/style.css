@@ -60,6 +60,11 @@ body {
   margin-top: 5px;
 }
 
+.header .title li a {
+  color: #fff;
+  text-decoration: none;
+}
+
 .header .src__box {
   text-align: right;
   display: -webkit-box;
@@ -238,8 +243,12 @@ body {
 
 .src__container {
   margin-top: 200px;
-  margin-bottom: 100px;
+  margin-bottom: 0px;
   display: none;
+}
+
+.src__container .img__src-box {
+  border-radius: 12px;
 }
 
 .src__container .movie__box {
@@ -270,6 +279,46 @@ body {
 }
 
 .src__container .src__title {
+  text-align: center;
+  color: #fff;
+  font-size: 35px;
+  font-weight: 700;
+  padding: 20px;
+}
+
+.src__movieShow {
+  margin-top: 0px;
+  margin-bottom: 100px;
+}
+
+.src__movieShow .movie__box {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.src__movieShow .img__src {
+  text-align: center;
+  border-radius: 15px;
+}
+
+.src__movieShow .img__src img {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 0px;
+  max-width: 250px;
+  width: 100%;
+}
+
+.src__movieShow .img__src .img__src-box {
+  border-radius: 15px;
+}
+
+.src__movieShow .img__src .title__img-src {
+  color: #fff;
+  line-height: 28px;
+}
+
+.src__movieShow .src__title {
   text-align: center;
   color: #fff;
   font-size: 35px;
@@ -554,6 +603,7 @@ body {
   right: 0;
   font-size: 30px;
   padding: 20px;
+  cursor: pointer;
 }
 
 .overlay__content .overlay {
