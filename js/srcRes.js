@@ -26,12 +26,13 @@ function getSearch(movies){
     fetch(movieDatas)
     .then(reponse => {return reponse.json('')})
     .then(displayMovie)
+    
 }
 
 function displayMovie(movies){
     const htmls = movies.results.map(movie => {
         return `
-        <div class=" movie__res-src">
+        <div class=" movie__res-src" onclick='showDetail(${movie.id})'>
         <img src='${imgApi}w200${movie.backdrop_path}'>
         <p class='title__search'>${movie.title}</p>
         </div>
@@ -39,6 +40,23 @@ function displayMovie(movies){
     })
     const html = htmls.join('')
     display.innerHTML = html
+    const slides = document.querySelectorAll('.movie__res-src')
+    const overlay__content = document.querySelector('.overlay__content')
+    for (const slide of slides ){
+      slide.addEventListener('click',() => {
+        overlay__content.classList.add('show')
+      })
+    }
+    const close = document.querySelector('.close')
+    close.addEventListener('click',() => {
+      overlay__content.classList.remove('show')
+    })
+  
 }
+function showDetail(id){
+    const overlay = document.querySelector('.overlay')
+    overlay.innerHTML = ` <iframe id="iframe"  src="https://www.2embed.ru/embed/tmdb/movie?id=${id}" width="100%" height="100%" frameborder="0"></iframe>`
+   }
+   
 srcMovie()
 searchIcon()

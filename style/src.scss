@@ -259,7 +259,7 @@ body
     display: block;
 }
 }
-.overlay
+.overlay__content
 {
     position: fixed;
     background: #111319;
@@ -268,5 +268,30 @@ body
     right: 0;
     bottom: 0;
     z-index: 9999999;
+    display: none;
+}
+.overlay__content.show 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
+}
+.overlay__content
+{
+    i 
+    {
+        color: #fff;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 30px;
+        padding: 20px;
+    }
+    .overlay
+    {
+        max-width: 800px;
+        height: 50%;
+        width: 100%;
+    }
 }

@@ -297,7 +297,7 @@ body {
   }
 }
 
-.overlay {
+.overlay__content {
   position: fixed;
   background: #111319;
   top: 0;
@@ -305,5 +305,33 @@ body {
   right: 0;
   bottom: 0;
   z-index: 9999999;
+  display: none;
+}
+
+.overlay__content.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.overlay__content i {
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 30px;
+  padding: 20px;
+}
+
+.overlay__content .overlay {
+  max-width: 800px;
+  height: 50%;
+  width: 100%;
 }
 /*# sourceMappingURL=src.css.map */

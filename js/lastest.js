@@ -27,9 +27,12 @@ function renderlastest(movies){
   }
   const close = document.querySelector('.close')
   close.addEventListener('click',() => {
-    window.location.reload()
-    
+    overlay__content.classList.remove('show')
   })
+
+  $('.close').click(function(){      
+    $('iframe').attr('src', $('iframe').attr('src'));
+});
 }
 
 function getlastest(callback){
