@@ -19,7 +19,7 @@ function renderRes(){
   
 }
 function movieApi(page){
-  const changepape = `https://api.themoviedb.org/3/movie/popular?api_key=d446dfce025a6b8b811140d296404e39&page=${page}`
+  const changepape = `https://api.themoviedb.org/3/movie/now_playing?api_key=d446dfce025a6b8b811140d296404e39&page=${page}`
   fetch(changepape)
   .then(response => {return response.json('')})
   .then(display)

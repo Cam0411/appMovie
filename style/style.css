@@ -391,6 +391,10 @@ body {
 }
 
 .modal .modal__container .modal__menu .modal__list li .play {
+  margin-left: 2px;
+}
+
+.modal .modal__container .modal__menu .modal__list li .play {
   margin-left: 5px;
 }
 
