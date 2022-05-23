@@ -1,8 +1,6 @@
 const trending = document.querySelector('.trending__movie  .swiper-wrapper')
 const trendingApi = `${baseUrl}popular${apiKey}`
 
-
-
 function showTrending(){
  getTrending(renderTrending)
 }
@@ -26,10 +24,7 @@ function renderTrending(movies){
       overlay.classList.add('show')
     })
   }
- 
 }
-
-
 
 
 function getTrending(callback){

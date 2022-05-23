@@ -23,6 +23,7 @@ function renderlastest(movies){
   for (const slide of slides ){
     slide.addEventListener('click',() => {
       overlay__content.classList.add('show')
+      
     })
   }
   const close = document.querySelector('.close')

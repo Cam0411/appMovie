@@ -65,6 +65,19 @@ body {
   text-decoration: none;
 }
 
+.header .src__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
 .header .src__box {
   text-align: right;
   display: -webkit-box;
@@ -73,20 +86,24 @@ body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  height: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 24px;
+  max-width: 200px;
+  width: 100%;
 }
 
 .header .src__box .src__info {
   background: none;
-  color: #fff;
-  border-radius: 24px;
-  padding: 7px 12px;
-  width: 200px;
+  border: none;
   outline: none;
-  border: 2px solid #fff;
+  color: #fff;
+  padding: 8px 5px;
+  margin-left: 2px;
+  width: 85%;
   -webkit-appearance: none;
 }
 
@@ -104,6 +121,13 @@ body {
 
 .header .src__box .src__info::placeholder {
   color: #fff;
+}
+
+.header .src__box .src {
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 5px 10px;
 }
 
 .header .icon__box {
@@ -208,6 +232,7 @@ body {
 .container .swiper.mySwiper {
   height: auto;
   margin-bottom: 40px;
+  cursor: pointer;
 }
 
 .container .swiper.mySwiper .title__movies {
@@ -254,6 +279,7 @@ body {
 .src__container .movie__box {
   margin-top: 10px;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .src__container .img__src {

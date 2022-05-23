@@ -16,8 +16,10 @@ function srcMovie(){
 }
 function searchIcon(){
     srcIcon.addEventListener('click',() => {
-        getSearch(src.value)
-        src.value = ''
+        if (src.value != ''){
+            getSearch(src.value)
+            src.value = ''
+        }
     })
 }
 
@@ -50,6 +52,7 @@ function displayMovie(movies){
     const close = document.querySelector('.close')
     close.addEventListener('click',() => {
       overlay__content.classList.remove('show')
+      
     })
   
 }

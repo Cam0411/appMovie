@@ -1,6 +1,7 @@
 const src__value = document.querySelector('.src__info ')
 const content = document.querySelector('.container')
 const src = document.querySelector('.src__container .img__src .grid .row')
+const srcIcon = document.querySelector('.src')
 const srcMovieShow = document.querySelector('.src__movieShow .img__src .grid .row')
 const mainsrc = document.querySelector('.src__container')
 const searchURL = "https://api.themoviedb.org/3/" + "search/movie" + apiKey
@@ -9,14 +10,29 @@ const src__title = document.querySelector('.src__title')
 function getSrc(){
     window.addEventListener('keypress',event => {
         if (event.keyCode == 13){
-            getsrcApi(src__value.value)
-            getMovieshow(src__value.value)
-            slider.style.display = 'none'
-            content.style.display = 'none'
-            mainsrc.style.display = 'block'  
-            src__title.innerHTML = `Results for "${src__value.value}"`
-            src__value.value = ''
+            if (src__value.value != ''){
+                getsrcApi(src__value.value)
+                getMovieshow(src__value.value)
+                slider.style.display = 'none'
+                content.style.display = 'none'
+                mainsrc.style.display = 'block'  
+                src__title.innerHTML = `Results for "${src__value.value}"`
+                src__value.value = ''
+            }
+       
         }
+    })
+}
+
+function getSrcIcon(){
+    srcIcon.addEventListener('click',() => {
+        getsrcApi(src__value.value)
+        getMovieshow(src__value.value)
+        slider.style.display = 'none'
+        content.style.display = 'none'
+        mainsrc.style.display = 'block'  
+        src__title.innerHTML = `Results for "${src__value.value}"`
+        src__value.value = ''
     })
 }
 
@@ -42,10 +58,7 @@ function displayMovies(movies){
         <img class='img__src-box' src='${imgApi}w200${movie.poster_path}'>
         <p class='title__img-src'>${movie.title}</p>
         </div>
-      
-       
         `
-        
     })
     
     const html = htmls.join('')
@@ -84,3 +97,4 @@ function displayMovieShows(movies){
 
 
 getSrc()
+getSrcIcon()
