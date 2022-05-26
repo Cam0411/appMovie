@@ -26,13 +26,15 @@ function getSrc(){
 
 function getSrcIcon(){
     srcIcon.addEventListener('click',() => {
-        getsrcApi(src__value.value)
-        getMovieshow(src__value.value)
-        slider.style.display = 'none'
-        content.style.display = 'none'
-        mainsrc.style.display = 'block'  
-        src__title.innerHTML = `Results for "${src__value.value}"`
-        src__value.value = ''
+        if (src__value.value != ''){
+            getsrcApi(src__value.value)
+            getMovieshow(src__value.value)
+            slider.style.display = 'none'
+            content.style.display = 'none'
+            mainsrc.style.display = 'block'  
+            src__title.innerHTML = `Results for "${src__value.value}"`
+            src__value.value = ''
+        }
     })
 }
 
