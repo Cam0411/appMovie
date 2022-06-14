@@ -4,7 +4,7 @@ const imgApi = "https://image.tmdb.org/t/p/"
 const  slider = document.querySelector('.slider')
 
 function showData(){
-  const arr = [675353,335787,453395, 414906,634649,763285]
+  const arr = [507086,545611,453395, 900667,718789,763285]
   const ranDom = Math.floor(Math.random() * arr.length)
   const sliderApi = `${baseUrl}${arr[ranDom]}${apiKey}`
   
